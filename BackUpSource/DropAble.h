@@ -13,16 +13,16 @@ namespace game
   DropAble();
   DisolveDropAble();
   
-  testTurn();
-  startTurn();
-  resetTurn();
+  bool testTurn(vec Turn);
+  startTurn(vec Turn);
+  bool resetTurn();
   
-  testMove();
-  startMove();
-  resetMove();
+  bool testMove(vec Move);
+  startMove(vec Move);
+  bool resetMove();
   
   animate(float frames);
-  removeLine();
+  removeLine(vec upperPivotBound, vec lowerPivotBound);
   
   private:
     KubeCombination* kC;
@@ -34,10 +34,6 @@ namespace game
     vec targPivotPosition;
     float moveProgress = 0.0;
     bool playerControlled = true;
-
-
-
-
 
   };
 
