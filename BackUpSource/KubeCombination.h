@@ -3,9 +3,12 @@
 //<MOD>
 
 #include "Kube.h"
+#include "geom.h"
 #include "Brickfactory.h"
 
 #define INDX_SHFT(indx,Max) (indx + (Max/2))
+#define LOC_INDX(x,y,z) localIndex.x=x-Max/2;localIndex.y=y-Max/2,localIndex.z=z-Max/2;
+
 #define ARR_ORG_SIZE 6
 
 
