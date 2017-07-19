@@ -15,7 +15,8 @@ public:
 
 
     /** Default constructor */
-    Kube(const Colour ExpectedColour, const vec DirAction, const vec OffSetToOrigin);
+    Kube(const Colour ExpectedColour, vec orgPos, vec orgRotation);
+    
     /** Default destructor */
     virtual ~Kube();
     /** Copy constructor
