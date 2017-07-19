@@ -10,6 +10,10 @@ namespace game
 
   class DropAble {
   public:
+  
+  //gets a Array of occupied KubeQuads by the 
+  bool[ARR_ORG_SIZE][ARR_ORG_SIZE][ARR_ORG_SIZE] getDropAbleProfile();
+    
   DropAble();
   DisolveDropAble();
   
