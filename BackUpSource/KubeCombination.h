@@ -33,6 +33,7 @@ public:
     void SetPosition( vec Position);
     void SetColour( vec rgbCol);
     vec GetHighestPoint();
+    void addCubeAt(vec index, Kube* toAdd);
     void disolveCube(Kube * toDisolve);
     vector<Kube*> getCubesWithinCube(vec upperLim, vec lower Lim);    
     
