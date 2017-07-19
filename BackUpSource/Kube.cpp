@@ -2,15 +2,12 @@
 #include "Kube.h"
 //#include "game.h"
 
-
-
-
 //<MOD>
 #define ROTATIONSPEED 0.42f
 #define DROPSPEED 9.81f
 
 
-Kube::Kube(Colour ExpectedColour, vec DirAction, vec OffSetToOrigin)
+Kube::Kube(Colour ExpectedColour, vec orgPos, vec orgRotation)
 {
     //ctor
 
@@ -18,11 +15,18 @@ Kube::Kube(Colour ExpectedColour, vec DirAction, vec OffSetToOrigin)
    CubularColour=ExpectedColour;
     //DefineKubeStartOrientation
 
-    vec *f3ptr= new vec(0.0f,0.0f,0.0f);
+    SetPosition(orgPos);
+    SetRotation(orgRotation);
+}
 
+Kube::SetPosition(vec Position) {
+    this.Position = Position;
+}
 
-    Kube::SetDirAction(f3ptr);
-
+Kube::SetDirection(vec Orientation) {
+    yaw = Orientation.x;
+    roll = Orientation.y;
+    pitch = Orientation.z;
 }
 
 Kube::~Kube()
