@@ -5,18 +5,16 @@
 #include "Kube.h"
 #include "Brickfactory.h"
 
+#define INDX_SHFT(indx,Max) (indx + (Max/2))
+#define ARR_ORG_SIZE 6
 
 
 // A Kube combination consists of at least one Kube, the first to be initialised, and to be stored in the vector<Kube>
 //Modell
 enum brickType {LBRICK, TBRICK, SBRICK, ZBRICK, IBRICK,OBRICK};
 
-
-
 namespace game
 {
-
-
 
 class KubeCombination: public dynent
 {
@@ -42,21 +40,18 @@ public:
    
     //<CollisionRelated>
     bool doesPlayerCollide(fpsent *d) { return false};
+    bool firstCubeAdded = false;
 
 private:
     vec Pivot;
-    Kube* arrayOrgPositions[8][8][8];
-    void updateCubeRotation();
-    void upateCubePosition();
-
+    Kube* cubeOrgPositions[ARR_ORG_SIZE][ARR_ORG_SIZE][ARR_ORG_SIZE];
+    void updateCubeRotation(Kube* kube);
+    void upateCubePosition(Kube* kube);
+    vec getKubeIndex(Kube* kube);
+    
     //TransmitCombinationToCompound
     vector<Kube*>   internalCubes();
-
-
-
     //</CollisionRelated>
-
-
 };
 }
 //</MOD>
