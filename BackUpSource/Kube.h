@@ -25,23 +25,11 @@ public:
     /** Access DirAction
      * \return The current value of DirAction
      */
-    vec GetDirAction()
-    {
-        vec returnVal;
-        returnVal= {yaw,roll,pitch};
-        return returnVal;
-    };
-    /** Set DirAction
-             * \param val New value to set
-             */
-    void SetDirAction( vec *val)
-    {
-        yaw=val->x;
-        roll=val->y;
-        pitch=val->z;
-    }
+     
+void SetPosition(vec Position);
+void SetDirection(vec Orientation) ;
 
-    Colour CubularColour;
+Colour CubularColour;
 
 
 private:
