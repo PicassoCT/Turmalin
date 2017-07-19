@@ -61,14 +61,14 @@ KubeCombination::KubeCombination(vec Pivot,  Colour colOfCube, brickType shapeOf
 	
 	//retrieves the index of a cub in a zero-centric +- coordinate system, with the pivot at zero
     vec KubeCombination::getKubeIndex(Kube* kube){
-		int lix,liy,liz;
+		vec localIndex;
 		
 		for (x=0, x < ARR_ORG_SIZE; x++){
 		for (y=0, y < ARR_ORG_SIZE; y++){
 		for (z=0, z < ARR_ORG_SIZE; z++){
 				if (cubeOrgPositions[x][y][z] != NULL && cubeOrgPositions[x][y][z] == kube){
 					LOC_INDX(x,y,z)
-					return vec(lix,liy,liz);
+					return localIndex;
 				}
 		}
 		}
