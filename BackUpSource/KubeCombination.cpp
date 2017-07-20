@@ -2,7 +2,12 @@
 #include "KubeCombination.h"
 
 KubeCombination::KubeCombination(vec Pivot,  Colour colOfCube, brickType shapeOfBrick) {
- 	
+	
+	BrickFactory brickFactory(shapeOfBrick, colOfCube, this);
+	
+ 	this.o = Pivot;
+	
+	
  
  };
     
