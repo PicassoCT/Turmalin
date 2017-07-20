@@ -4,6 +4,7 @@
 #define KUBEONCE
 #define KUBESIZE 12.0f
 
+#include "md3.h"
 
 namespace game
 {
@@ -11,8 +12,6 @@ namespace game
 class Kube : public physent
  {
 public:
-
-
 
     /** Default constructor */
     Kube(const Colour ExpectedColour, vec orgPos, vec orgRotation);
@@ -30,13 +29,13 @@ public:
 void SetPosition(vec Position);
 void SetDirection(vec Orientation) ;
 
-Colour CubularColour;
-
+//Sets the Cubes Walls lower 
+void lowerCubeDoors(vec Direction);
 
 private:
-    ///TODO md3  geometry;
-
-
+    md3 cubeModel;
+    Colour CubularColour;
+ 
 };
 };
 //</MOD>
