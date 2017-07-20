@@ -4,7 +4,7 @@
    class Brickfactory
 {
 
-    buildBrick(brickType type, KubeCombination* kC);
+    Brickfactory(brickType type, KubeCombination* kC);
 
    
     void buildLBRICK(Colour choosenColour, KubeCombination* kC);
