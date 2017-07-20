@@ -6,13 +6,16 @@
 
 
 class Turmalin{
-
+public:
+  
 Turmalin (DropAble* scenario[10][10][32]);
 DropAble* playField[10][10][32];
 
 updateFlagPosition();
   
 checkPlayerOnFlag();
+  
+exchangeFlagPoleSitta();
 
 dropNewStone();
 
@@ -20,7 +23,9 @@ checkForFullSquares();
 
 checkEndGameCondition();
   
-DropAble* [10][10][32] exportPlayingField();
+ private:
+  DropAble* [10][10][32] exportPlayingField();
+  
 
 };
 
