@@ -6,13 +6,16 @@
 #define ROTATIONSPEED 0.42f
 #define DROPSPEED 9.81f
 
+#include "Kube.h"
 
 Kube::Kube(Colour ExpectedColour, vec orgPos, vec orgRotation)
 {
     //ctor
-
+    cubeModel = *new model("Cube.md3");
+    cubeModel.load();
+    
     //DefineKubeColour
-   CubularColour=ExpectedColour;
+   CubularColour = ExpectedColour;
     //DefineKubeStartOrientation
 
     SetPosition(orgPos);
@@ -20,7 +23,7 @@ Kube::Kube(Colour ExpectedColour, vec orgPos, vec orgRotation)
 }
 
 Kube::SetPosition(vec Position) {
-    this.Position = Position;
+    this.o  = Position;
 }
 
 Kube::SetDirection(vec Orientation) {
@@ -31,6 +34,7 @@ Kube::SetDirection(vec Orientation) {
 
 Kube::~Kube()
 {
+    ~cubeModel();
     //dtor
 }
 
