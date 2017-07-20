@@ -1,5 +1,5 @@
-#ifndef KUBULARBELLS
-#define KUBULARBELLS
+#ifndef KUBECOMBINATION
+#define KUBECOMBINATION
 //<MOD>
 
 #include "Kube.h"
@@ -59,4 +59,4 @@ private:
 }
 //</MOD>
 
-#endif KUBULARBELLS
+#endif KUBECOMBINATION
