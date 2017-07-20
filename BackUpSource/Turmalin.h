@@ -24,7 +24,8 @@ checkForFullSquares();
 checkEndGameCondition();
   
  private:
-  DropAble* [10][10][32] exportPlayingField();
+  DropAble* [10][10][32] exportPlayingField()
+  
   
 
 };
