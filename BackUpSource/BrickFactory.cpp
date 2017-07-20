@@ -5,7 +5,7 @@
 #define ADD_CUBE(x,y,z)  CurrCube = new Kube(choosenColour,*new vec(KUBESIZE *x, KUBESIZE*y, KUBESIZE * z),*new vec(0.0f, 0.0f, 0.0f));\
                           kC->addCubeAt(*new vec(x,y,z), *CurrCube);
 
-BrickFactory:: buildBrick(brickType type, Colour choosenColour, KubeCombination* kC){
+BrickFactory(brickType type, Colour choosenColour, KubeCombination* kC){
   switch(type){
   case LBRICK: buildLBrick(choosenColour, KubeCombination* kC);break;
   case LBRICK: buildLBrick(choosenColour, KubeCombination* kC);break;
