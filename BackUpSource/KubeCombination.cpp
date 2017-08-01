@@ -11,8 +11,24 @@ KubeCombination::KubeCombination(vec Pivot,  Colour colOfCube, brickType shapeOf
  
  };
     
-    void KubeCombination::SetRotation( vec Rotation);
-    void KubeCombination::SetPosition( vec Position);
+    void KubeCombination::SetRotation( vec Rotation) {
+    //get Cube Position 
+	    // Rotate Kubecombination
+	    this.o.yaw = Rotation.yaw;
+	    this.o.pitch = Rotation.pitch;
+	    this.o.roll = Rotation.roll;
+		 upateCubesPosition();
+	 	 updateCubesRotation();
+	    
+    };
+    void KubeCombination::SetPosition( vec Position) {
+	//KubeCombination update Pivot
+	    this.o = Position;
+    //for all cubes
+	   //Set Position 
+	    updateCubePosition();
+    
+    };
     void KubeCombination::SetColour( vec rgbCol);
     vec KubeCombination::GetHighestPoint();
     void KubeCombination::disolveCube(Kube * toDisolve);
@@ -34,9 +50,7 @@ KubeCombination::KubeCombination(vec Pivot,  Colour colOfCube, brickType shapeOf
 				cubeOrgPositions[x][y][z].pitch = pitch;
 				cubeOrgPositions[x][y][z].roll = roll;
 				
-			}
-		
-		
+			}		
 	}
 	
 	
@@ -59,9 +73,7 @@ KubeCombination::KubeCombination(vec Pivot,  Colour colOfCube, brickType shapeOf
 			}
 		}
 		}
-		}
-		
-		
+		}		
 	};
 	
 	//retrieves the index of a cub in a zero-centric +- coordinate system, with the pivot at zero
